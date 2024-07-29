@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-      <h1>Clothe Nation</h1>
-      <h2>Product Details</h2>
+        <h1>Clothe Nation</h1>
+        <h2>Product Details</h2>
     </header>
 
     <main>
-      <section id="product-details">
-        <h2 id="product-name">Product Name</h2>
-        <img id="product-image" src="" alt="Product Image" />
-        <p id="product-description">Product description goes here.</p>
-      </section>
+        <section id="product-details">
+            <h2 id="product-name">Product Name</h2>
+            <img id="product-image" src="" alt="Product Image">
+            <p id="product-description">Product description goes here.</p>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Clothe Nation. All rights reserved.</p>
+        <p>&copy; 2024 Clothe Nation. All rights reserved.</p>
     </footer>
 
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const product = urlParams.get("product");
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
 
-      const products = {
-        cap: {
-          name: "Nation Cap",
-          image: "Nation Cap.png",
-          description:
-            "A stylish and comfortable cap that represents our nation.",
-        },
-        shirt: {
-          name: "Nation Shirt",
-          image: "Nation Shirt.png",
-          description:
-            "A stylish and comfortable shirt that represents our nation.",
-        },
-        shorts: {
-          name: "Nation Shorts",
-          image: "Nation Shorts.png",
-          description:
-            "Stylish and comfortable shorts that represent our nation.",
-        },
-      };
+        const products = {
+            cap: {
+                name: 'Nation Cap',
+                image: 'Nation Cap.png',
+                description: 'A stylish and comfortable cap that represents our nation.'
+            },
+            shirt: {
+                name: 'Nation Shirt',
+                image: 'Nation Shirt.png',
+                description: 'A stylish and comfortable shirt that represents our nation.'
+            },
+            shorts: {
+                name: 'Nation Shorts',
+                image: 'Nation Shorts.png',
+                description: 'Stylish and comfortable shorts that represent our nation.'
+            }
+        };
 
-      const productDetails = products[product];
-      if (productDetails) {
-        document.getElementById("product-name").innerText = productDetails.name;
-        document.getElementById("product-image").src = productDetails.image;
-        document.getElementById("product-description").innerText =
-          productDetails.description;
-      } else {
-        document.getElementById("product-name").innerText = "Product Not Found";
-        document.getElementById("product-image").alt = "No Image";
-        document.getElementById("product-description").innerText =
-          "The product you are looking for does not exist.";
-      }
+        const productDetails = products[product];
+        if (productDetails) {
+            document.getElementById('product-name').innerText = productDetails.name;
+            document.getElementById('product-image').src = productDetails.image;
+            document.getElementById('product-description').innerText = productDetails.description;
+        } else {
+            document.getElementById('product-name').innerText = 'Product Not Found';
+            document.getElementById('product-image').alt = 'No Image';
+            document.getElementById('product-description').innerText = 'The product you are looking for does not exist.';
+        }
     </script>
-  </body>
+</body>
 </html>
